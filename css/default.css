@@ -96,7 +96,6 @@ body{
   }
   
   canvas {
-    touch-action: none;
       cursor: crosshair;
        display: block;
   }
