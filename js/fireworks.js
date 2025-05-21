@@ -268,5 +268,27 @@ canvas.addEventListener( 'mouseup', function( e ) {
 	mousedown = false;
 });
 
+// Touch event bindings
+canvas.addEventListener('touchstart', function(e) {
+  e.preventDefault();
+  mousedown = true;
+  var touch = e.touches[0];
+  mx = touch.pageX - canvas.offsetLeft;
+  my = touch.pageY - canvas.offsetTop;
+}, false);
+
+canvas.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+  var touch = e.touches[0];
+  mx = touch.pageX - canvas.offsetLeft;
+  my = touch.pageY - canvas.offsetTop;
+}, false);
+
+canvas.addEventListener('touchend', function(e) {
+  e.preventDefault();
+  mousedown = false;
+}, false);
+
+
 // once the window loads, we are ready for some fireworks!
 window.onload = loop;
