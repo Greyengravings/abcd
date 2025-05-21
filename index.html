@@ -26,7 +26,6 @@
             <canvas id="garden"></canvas>
             <div id="words">
               <div id="messages">
-                Welcome your 20s
               </div>
               <div id="loveu">
                 God Bless You Dear!! <br>
@@ -53,8 +52,8 @@
 
     <!-- 🎉 Celebration Page Button -->
     <button id="redirectBtn"
-      style="position: absolute; top: 20px; right: 20px; background: rgba(255, 182, 193, 0.2); color: white; border: 1px solid pink; padding: 10px 20px; border-radius: 10px; font-family: sans-serif; cursor: pointer; z-index: 10;">
-      View Card
+      style="position: absolute; top: 20px; right: 20px; background: rgb(254, 80, 109); color: white; border: 1px solid rgb(244, 128, 147); padding: 10px 20px; border-radius: 10px; font-family: sans-serif; cursor: pointer; z-index: 10;">
+      Click Me
     </button>
   </div>
 
@@ -89,7 +88,8 @@
     // Redirect button logic
     document.getElementById("redirectBtn").onclick = () => {
       window.location.href = "index2.html"; // ✅ change as needed
-    };
+    }
+    document.getElementById("redirectBtn").style.display = "block";
   </script>
 
   <script type="text/javascript" src="js/fireworks.js"></script>
