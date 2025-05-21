@@ -268,26 +268,21 @@ canvas.addEventListener( 'mouseup', function( e ) {
 	mousedown = false;
 });
 
-// Touch event bindings
-canvas.addEventListener('touchstart', function(e) {
-  e.preventDefault();
-  mousedown = true;
-  var touch = e.touches[0];
-  mx = touch.pageX - canvas.offsetLeft;
-  my = touch.pageY - canvas.offsetTop;
-}, false);
+canvas.addEventListener( 'touchmove', function( e ) {
+	mx = e.pageX - canvas.offsetLeft;
+	my = e.pageY - canvas.offsetTop;
+});
 
-canvas.addEventListener('touchmove', function(e) {
-  e.preventDefault();
-  var touch = e.touches[0];
-  mx = touch.pageX - canvas.offsetLeft;
-  my = touch.pageY - canvas.offsetTop;
-}, false);
+// toggle mousedown state and prevent canvas from being selected
+canvas.addEventListener( 'touchstart', function( e ) {
+	e.preventDefault();
+	mousedown = true;
+});
 
-canvas.addEventListener('touchend', function(e) {
-  e.preventDefault();
-  mousedown = false;
-}, false);
+canvas.addEventListener( 'touchend', function( e ) {
+	e.preventDefault();
+	mousedown = false;
+});
 
 
 // once the window loads, we are ready for some fireworks!
